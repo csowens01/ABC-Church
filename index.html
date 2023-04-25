@@ -1,3 +1,48 @@
+<!DOCTYPE html>
 <html>
-  
+<head>
+  <link href="ABCStyles.css" rel="stylesheet" type="text/css">
+</head>
+<body>
+    <div class="top">
+        <h1>ABC Church</h1>
+        <small>
+            <a href="#home" class="active"> Home</a>
+            <a href="ABCStaff.html"> Staff</a>
+            <a href="ABCRecordings.html"> Recordings</a>
+            <a href="ABCCalendar.html"> Calendar</a>
+            <a href="ABCMembers.html"> Member Services</a>
+            <a href="ABCAccountManagement.html"> Account Management</a>
+            <a href="ABCLogin.html"> Login</a>
+        </small>
+    </div>
+
+    <div class="daily-agenda-section">
+        <h2>Daily Agenda</h2>
+        <p>Today's agenda:</p>
+        <ul>
+            <li>10:00 AM - Morning Worship Service</li>
+            <li>12:00 PM - Fellowship Lunch</li>
+            <li>1:00 PM - Afternoon Prayer Meeting</li>
+        </ul>
+        <p>Ceremony description:</p>
+        <p>There will be a baptism ceremony during the morning worship service.</p>
+    </div>
+
+    <div class="donate-section">
+        <h2>Donate to ABC Church!</h2>
+        <form>
+            <label for="amount">Donation Amount:</label>
+            <input type="number" name="amount" id="amount" placeholder="Enter donation amount">
+            <label for="cardnumber">Card Number:</label>
+            <input type="text" name="cardnumber" id="cardnumber" placeholder="Enter card number">
+            <label for="expiry">Expiry Date:</label>
+            <input type="text" name="expiry" id="expiry" placeholder="MM/YY">
+            <label for="cvv">CVV:</label>
+            <input type="text" name="cvv" id="cvv" placeholder="Enter CVV">
+            <input type="submit" value="Donate">
+        </form>
+    </div>
+
+</body>
 </html>
