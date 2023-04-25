@@ -1,0 +1,70 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <link href="ABCManagement.css" rel="stylesheet" type="text/css">
+</head>
+<body>
+    <div class="top">
+        <h1>ABC Church</h1>
+        <small>
+            <a href="ABCHome.html">  Home</a>
+            <a href="ABCStaff.html"> Staff</a>
+            <a href="ABCRecordings.html"> Recordings</a>
+            <a href="ABCCalendar.html"> Calendar</a>
+            <a href="ABCMembers.html"> Member Services</a>
+            <a href="ABCAccountManagement.html"> Account Management</a>
+            <a href="ABCLogin.html"> Login</a>
+            <a href="#management" class="active"> Management</a>
+        </small>
+        </div>
+        <div class="payments">
+            <h2>Monthly Payment History</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Date</th>
+                        <th>Amount</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>2023-04-01</td>
+                        <td>$50.00</td>
+                    </tr>
+                    <tr>
+                        <td>2023-03-01</td>
+                        <td>$50.00</td>
+                    </tr>
+                    <tr>
+                        <td>2023-02-01</td>
+                        <td>$50.00</td>
+                    </tr>
+                    <tr>
+                        <td>2023-01-01</td>
+                        <td>$50.00</td>
+                    </tr>
+                    <tr>
+                        <td>2022-12-01</td>
+                        <td>$50.00</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    <div class="send-report">
+        <form>
+            <input type="submit" value="Send Report">
+        </form>
+    </div>
+    <div class="confirmation" style="display:none;">
+        <p>Report sent successfully!</p>
+    </div>
+    <script>
+        const sendReportButton = document.querySelector(".send-report input[type='submit']");
+        sendReportButton.addEventListener("click", (event) => {
+            event.preventDefault();
+            const confirmationMessage = document.querySelector(".confirmation");
+            confirmationMessage.style.display = "block";
+        });
+    </script>
+</body>
+</html>

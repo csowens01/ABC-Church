@@ -1,0 +1,99 @@
+﻿/* Center the top navigation bar */
+.top {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100px;
+    background-color: #333;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+}
+
+    /* Style the ABC Church title */
+    .top h1 {
+        font-size: 48px;
+        font-weight: bold;
+        font-family: Arial, sans-serif;
+        color: #fff;
+        margin: 0;
+        text-transform: uppercase;
+    }
+
+    /* Style the links in the top navigation bar */
+    .top a {
+        display: inline-block;
+        padding: 10px;
+        font-size: 16px;
+        font-weight: bold;
+        color: #fff;
+        text-decoration: none;
+    }
+
+        /* Style the active link in the top navigation bar */
+        .top a.active {
+            color: #fff;
+            background-color: #4CAF50;
+        }
+
+/* Style the hover effect for links in the top navigation bar */
+.top a:hover {
+    background-color: #ddd;
+}
+
+.container {
+    width: 400px;
+    margin: auto;
+    margin-top: 50px;
+    background-color: #f2f2f2;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0px 0px 10px 0px #888;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.form-group {
+    margin-bottom: 10px;
+}
+
+label {
+    display: inline-block;
+    width: 100px;
+}
+
+input[type=text], input[type=password] {
+    padding: 10px;
+    border-radius: 5px;
+    border: none;
+    background-color: #f9f9f9;
+    width: 100%;
+}
+
+button[type=submit] {
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    float: right;
+}
+
+.btn {
+    background-color: #008CBA;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-right: 10px;
+    float: left;
+}
+
+    .btn:hover, button[type=submit]:hover {
+        background-color: #45a049;
+    }

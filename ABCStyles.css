@@ -1,0 +1,219 @@
+﻿/* Center the top navigation bar */
+.top {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100px;
+    background-color: #333;
+    position: sticky;
+    top: 0;
+    left: 0;
+    right: 0;
+}
+
+    /* Style the ABC Church title */
+    .top h1 {
+        font-size: 48px;
+        font-weight: bold;
+        font-family: Arial, sans-serif;
+        color: #fff;
+        margin: 0;
+        text-transform: uppercase;
+    }
+
+    /* Style the links in the top navigation bar */
+    .top a {
+        display: inline-block;
+        padding: 10px;
+        font-size: 16px;
+        font-weight: bold;
+        color: #fff;
+        text-decoration: none;
+    }
+
+        /* Style the active link in the top navigation bar */
+        .top a.active {
+            color: #fff;
+            background-color: #4CAF50;
+        }
+
+        /* Style the hover effect for links in the top navigation bar */
+        .top a:hover {
+            background-color: #ddd;
+        }
+
+/* Daily Agenda section */
+.daily-agenda {
+    margin: 50px auto;
+    max-width: 600px;
+}
+
+    .daily-agenda h2 {
+        font-size: 36px;
+        font-weight: bold;
+        color: #333;
+        margin: 0;
+        text-align: center;
+    }
+
+    .daily-agenda p {
+        font-size: 18px;
+        color: #333;
+        line-height: 1.5;
+    }
+
+    .daily-agenda ul {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+    }
+
+    .daily-agenda li {
+        font-size: 18px;
+        color: #333;
+        line-height: 1.5;
+        margin: 10px 0;
+        padding: 0;
+    }
+
+    .daily-agenda .event {
+        font-weight: bold;
+    }
+
+    /* Style the highlight element in the daily agenda */
+    .daily-agenda .highlight {
+        background-color: #4CAF50;
+        color: #fff;
+    }
+
+/* Style the donate section */
+.donate-section {
+    margin-top: 50px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+    /* Style the donate section header */
+    .donate-section h2 {
+        font-size: 36px;
+        font-weight: bold;
+        color: #333;
+        text-align: center;
+        margin-bottom: 20px;
+    }
+
+    /* Style the donation form */
+    .donate-section form {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        border: 1px solid #ccc;
+        padding: 20px;
+        border-radius: 10px;
+        width: 50%;
+    }
+
+    /* Style the donation form labels */
+    .donate-section label {
+        font-size: 18px;
+        font-weight: bold;
+        color: #333;
+        margin-bottom: 10px;
+    }
+
+    /* Style the donation form input fields */
+    .donate-section input[type="number"],
+    .donate-section input[type="text"] {
+        padding: 10px;
+        margin-bottom: 20px;
+        font-size: 16px;
+        border-radius: 5px;
+        border: 1px solid #ccc;
+    }
+
+    /* Style the donate form submit button */
+    .donate-section input[type="submit"] {
+        background-color: #4CAF50;
+        color: #fff;
+        font-size: 20px;
+        font-weight: bold;
+        padding: 10px 20px;
+        border-radius: 5px;
+        cursor: pointer;
+    }
+
+        /* Style the donate form submit button on hover */
+        .donate-section input[type="submit"]:hover {
+            background-color: #3e8e41;
+        }
+
+table {
+    border-collapse: collapse;
+    margin: 0 auto;
+}
+
+th, td {
+    width: 80px;
+    height: 80px;
+    border: 1px solid black;
+    text-align: center;
+    vertical-align: middle;
+}
+
+th {
+    background-color: lightgrey;
+}
+
+td:hover {
+    background-color: lightblue;
+    cursor: pointer; /* Change cursor to pointer when hovering over a day */
+}
+
+form {
+    margin: 20px auto;
+    max-width: 500px;
+    padding: 20px;
+    background-color: #fff;
+    box-shadow: 0px 0px 10px #ccc;
+}
+
+fieldset {
+    margin: 20px 0;
+    padding: 20px;
+    border: 1px solid #ccc;
+}
+
+legend {
+    font-weight: bold;
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="tel"],
+input[type="password"] {
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    width: 100%;
+    box-sizing: border-box;
+    margin-bottom: 10px;
+}
+
+input[type="submit"] {
+    background-color: #333;
+    color: #fff;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+    input[type="submit"]:hover {
+        background-color: #555;
+    }

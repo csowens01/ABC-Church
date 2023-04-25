@@ -1,0 +1,86 @@
+﻿/* Center the top navigation bar */
+.top {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100px;
+    background-color: #333;
+    position: sticky;
+    top: 0;
+    left: 0;
+    right: 0;
+}
+
+    /* Style the ABC Church title */
+    .top h1 {
+        font-size: 48px;
+        font-weight: bold;
+        font-family: Arial, sans-serif;
+        color: #fff;
+        margin: 0;
+        text-transform: uppercase;
+    }
+
+    /* Style the links in the top navigation bar */
+    .top a {
+        display: inline-block;
+        padding: 10px;
+        font-size: 16px;
+        font-weight: bold;
+        color: #fff;
+        text-decoration: none;
+    }
+
+        /* Style the active link in the top navigation bar */
+        .top a.active {
+            color: #fff;
+            background-color: #4CAF50;
+        }
+
+        /* Style the hover effect for links in the top navigation bar */
+        .top a:hover {
+            background-color: #ddd;
+        }
+
+.payments {
+    text-align: center;
+}
+
+table {
+    margin: auto;
+    width: 80%;
+    border-collapse: collapse;
+}
+
+th, td {
+    padding: 8px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+}
+
+th {
+    background-color: #f2f2f2;
+    font-weight: bold;
+}
+
+.send-report input[type='submit'] {
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+    .send-report input[type='submit']:hover {
+        background-color: #45a049;
+    }
+
+.confirmation {
+    display: none;
+    padding: 10px;
+    background-color: #dff0d8;
+    border: 1px solid #d6e9c6;
+    border-radius: 5px;
+    margin-top: 10px;
+}

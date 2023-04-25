@@ -1,0 +1,58 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <link href="ABCstyles.css" rel="stylesheet" type="text/css">
+    <script src="ABCCalendar.js"></script>
+
+    <div class="top">
+        <p style="margin-left: 50px;">
+            Calendar
+            <small>
+                <a href="ABCHome.html"> Home</a>
+                <a href="ABCStaff.html"> Staff</a>
+                <a href="ABCRecordings.html"> Recordings</a>
+                <a href="#calendar" class='active'> Calendar</a>
+                <a href="ABCMembers.html"> Member Services</a>
+                <a href="ABCAccountManagement.html"> Account Management</a>
+                <a href="ABCLogin.html"> Login</a>
+            </small>
+    </div>
+
+    <div>
+        <p>What ceremony would you like to request?</p>
+        <form>
+            <label for="ceremony">Ceremony:</label>
+            <select name="ceremony" id="ceremony">
+                <option value="Baptism"> Baptism </option>
+                <option value="Wedding"> Wedding </option>
+                <option value="Funeral"> Funeral </option>
+            </select>
+        </form>
+    </div>
+
+    <title>Interactive Calendar</title>
+
+</head>
+<body onload="changeMonth(currentMonth);">
+    <h1>Interactive Calendar</h1>
+    <div>
+        <button onclick="prevMonth()">Prev</button>
+        <button onclick="nextMonth()">Next</button>
+    </div>
+    <table>
+        <thead>
+            <tr>
+                <th>Sun</th>
+                <th>Mon</th>
+                <th>Tue</th>
+                <th>Wed</th>
+                <th>Thu</th>
+                <th>Fri</th>
+                <th>Sat</th>
+            </tr>
+        </thead>
+        <tbody></tbody>
+    </table>
+    <p><a href="ABCCalendarStaff.html">View Staff Calendar</a></p>
+</body>
+</html>

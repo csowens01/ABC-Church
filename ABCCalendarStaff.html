@@ -1,0 +1,142 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <link href="ABCstyles.css" rel="stylesheet" type="text/css">
+
+    <div class="top">
+        <p style="margin-left: 50px;">
+            Calendar
+            <small>
+                <a href="ABCHome.html"> Home</a>
+                <a href="ABCStaff.html"> Staff</a>
+                <a href="ABCRecordings.html"> Recordings</a>
+                <a href="#calendar" class='active'> Calendar</a>
+                <a href="ABCMembers.html"> Member Services</a>
+                <a href="ABCAccountManagement.html"> Account Management</a>
+                <a href="ABCManagement.html"> Management</a>
+                <a href="ABCLogin.html"> Login</a>
+            </small>
+    </div>
+
+    <p>
+        What requested ceremony would you like to add? <br>
+        <form>
+            Ceremony
+            <select name="ceremony">
+                <option value="Baptism"> Baptism </option>
+                <option value="Wedding"> Wedding </option>
+                <option value="Funeral"> Funeral </option>
+            </select>
+        </form>
+    </p>
+
+    <p>
+        What requested ceremony would you like to delete? <br>
+        <form>
+            Ceremony
+            <select name="ceremony">
+                <option value="Baptism"> Baptism </option>
+                <option value="Wedding"> Wedding </option>
+                <option value="Funeral"> Funeral </option>
+            </select>
+        </form>
+    </p>
+
+    <title>Interactive Calendar</title>
+    <style>
+        table {
+            border-collapse: collapse;
+            margin: 0 auto;
+        }
+
+        th, td {
+            width: 80px;
+            height: 80px;
+            border: 1px solid black;
+            text-align: center;
+            vertical-align: middle;
+        }
+
+        th {
+            background-color: lightgrey;
+        }
+
+        td:hover {
+            background-color: lightblue;
+            cursor: pointer; /* Change cursor to pointer when hovering over a day */
+        }
+    </style>
+    <script>
+        let currentMonth = 1;
+
+        function changeMonth(month) {
+            const table = document.querySelector('table');
+            const tbody = table.querySelector('tbody');
+            const date = new Date();
+            date.setMonth(month);
+            const monthName = date.toLocaleString('default', { month: 'long' });
+            const year = date.getFullYear();
+            const daysInMonth = new Date(year, month + 1, 0).getDate();
+            let dayOfWeek = new Date(year, month, 1).getDay();
+            if (dayOfWeek === 0) dayOfWeek = 7; // Sunday is 0, but we want it to be 7
+            tbody.innerHTML = ''; // Clear existing table rows
+            let row = document.createElement('tr');
+            for (let i = 1; i < dayOfWeek; i++) {
+                row.appendChild(document.createElement('td'));
+            }
+            for (let i = 1; i <= daysInMonth; i++) {
+                const cell = document.createElement('td');
+                cell.textContent = i;
+                cell.addEventListener('click', function () { // Add click event listener to each day cell
+                    alert(`Thank you for the request! We will update the calendar for you! You chose ${month + 1}/${i}/${year}`); // Show an alert with the date
+                });
+                row.appendChild(cell);
+                if (dayOfWeek === 7) {
+                    tbody.appendChild(row);
+                    row = document.createElement('tr');
+                    dayOfWeek = 1;
+                } else {
+                    dayOfWeek++;
+                }
+            }
+            if (dayOfWeek !== 1) {
+                for (let i = dayOfWeek; i <= 7; i++) {
+                    row.appendChild(document.createElement('td'));
+                }
+                tbody.appendChild(row);
+            }
+            document.querySelector('h1').textContent = `${monthName} ${year}`;
+            currentMonth = month;
+        }
+
+        function prevMonth() {
+            changeMonth(currentMonth - 1);
+        }
+
+        function nextMonth() {
+            changeMonth(currentMonth + 1);
+        }
+    </script>
+</head>
+<body onload="changeMonth(currentMonth);">
+    <h1>Interactive Calendar</h1>
+    <div>
+        <button onclick="prevMonth()">Prev</button>
+        <button onclick="nextMonth()">Next</button>
+    </div>
+    <table>
+        <thead>
+            <tr>
+                <th>Sun</th>
+                <th>Mon</th>
+                <th>Tue</th>
+                <th>Wed</th>
+                <th>Thu</th>
+                <th>Fri</th>
+                <th>Sat</th>
+            </tr>
+        </thead>
+        <tbody></tbody>
+    </table>
+</body>
+</html>

@@ -1,0 +1,50 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Account Management</title>
+    <link href="ABCStyles.css" rel="stylesheet" type="text/css">
+</head>
+<body>
+    <div class="top">
+        <h1>ABC Church</h1>
+        <small>
+            <a href="ABCHome.html"> Home</a>
+            <a href="ABCStaff.html"> Staff</a>
+            <a href="ABCRecordings.html"> Recordings</a>
+            <a href="ABCCalendar.html"> Calendar</a>
+            <a href="ABCMembers.html"> Member Services</a>
+            <a href="#accountmanagement" class="active"> Account Management</a>
+            <a href="ABCLogin.html"> Login</a>
+        </small>
+    </div>
+    <h2>Account Management</h2>
+    <form>
+        <fieldset>
+            <legend>Personal Information</legend>
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name"><br>
+
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email"><br>
+
+            <label for="phone">Phone:</label>
+            <input type="tel" id="phone" name="phone"><br>
+        </fieldset>
+
+        <fieldset>
+            <legend>Change Password</legend>
+            <label for="password">Password:</label>
+            <input type="password" id="password" name="password"><br>
+
+            <label for="new-password">New Password:</label>
+            <input type="password" id="new-password" name="new-password"><br>
+
+            <label for="confirm-password">Confirm New Password:</label>
+            <input type="password" id="confirm-password" name="confirm-password"><br>
+        </fieldset>
+
+        <input type="submit" value="Save Changes">
+    </form>
+    </body>
+</html>
